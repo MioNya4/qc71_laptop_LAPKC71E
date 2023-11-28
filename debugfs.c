@@ -209,8 +209,8 @@ int __init qc71_debugfs_setup(void)
 	int err = 0;
 	size_t i;
 
-	if (!debugregs)
-		return -ENODEV;
+	//if (!debugregs)
+	//	return -ENODEV;
 
 	qc71_debugfs_dir = debugfs_create_dir(DEBUGFS_DIR_NAME, NULL);
 
