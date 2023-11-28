@@ -370,8 +370,8 @@ int __init qc71_led_lightbar_setup(void)
 {
 	int err;
 
-	if (nolightbar || !qc71_features.lightbar)
-		return -ENODEV;
+	//if (nolightbar || !qc71_features.lightbar)
+	//	return -ENODEV;
 
 #if 0
 	err = led_classdev_multicolor_register(&qc71_platform_dev->dev, &qc71_lightbar_led);
