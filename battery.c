@@ -106,8 +106,8 @@ static struct acpi_battery_hook qc71_laptop_batt_hook = {
 
 int __init qc71_battery_setup(void)
 {
-	if (nobattery || !qc71_features.batt_charge_limit)
-		return -ENODEV;
+	//if (nobattery || !qc71_features.batt_charge_limit)
+	//	return -ENODEV;
 
 	battery_hook_register(&qc71_laptop_batt_hook);
 	battery_hook_registered = true;
