@@ -135,15 +135,15 @@ static int __init check_features_bios(void)
 	int bios_version;
 
 	if (!dmi_check_system(qc71_dmi_table)) {
-		pr_warn("no DMI match\n");
-		return -ENODEV;
+		pr_warn("no DMI match but idc\n");
+		//return -ENODEV;
 	}
 
 	bios_version_str = dmi_get_system_info(DMI_BIOS_VERSION);
 
 	if (!bios_version_str) {
-		pr_warn("failed to get BIOS version DMI string\n");
-		return -ENOENT;
+		pr_warn("failed to get BIOS version DMI string but idc\n");
+		//return -ENOENT;
 	}
 
 	pr_info("BIOS version string: '%s'\n", bios_version_str);
@@ -151,8 +151,8 @@ static int __init check_features_bios(void)
 	bios_version = parse_bios_version(bios_version_str);
 
 	if (bios_version < 0) {
-		pr_warn("cannot parse BIOS version\n");
-		return -EINVAL;
+		pr_warn("cannot parse BIOS version still dc\n");
+		//return -EINVAL;
 	}
 
 	pr_info("BIOS version: %04d\n", bios_version);
